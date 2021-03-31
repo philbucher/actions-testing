@@ -34,7 +34,7 @@ jobs:
 
     container:
       image: philbucher/basic-docker-with-entrypoint:latest
-      options: "--entrypoint /bin/bash"
+      options: "--entrypoint /bin/bash echo DDFFEE"
 
     steps:
     - uses: actions/checkout@v2
