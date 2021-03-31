@@ -34,6 +34,7 @@ jobs:
 
     container:
       image: philbucher/basic-docker-with-entrypoint:latest
+      options: "--entrypoint /bin/bash"
 
     steps:
     - uses: actions/checkout@v2
