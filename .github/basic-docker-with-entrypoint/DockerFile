@@ -2,5 +2,5 @@ FROM alpine
 
 RUN echo 'we are running some # of cool things'
 
-ENTRYPOINT ["sh", "-c", "echo $GITHUB_SHA"]
+ENTRYPOINT ["sh", "-c", "echo AABBCCDD $GITHUB_SHA"]
 
