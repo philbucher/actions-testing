@@ -14,23 +14,12 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        # Github Actions requires a single row to be added to the build matrix.
-        # See https://help.github.com/en/articles/workflow-syntax-for-github-actions.
-        name: [
-          "without unity - with unittests",
-          "without unity - without unittests",
-          "with unity - without unittests"
-        ]
-        include:
-          - name: without unity - with unittests
-            unity_build: OFF
+        UNITY_BUILD: [ON, OFF]
+        BUILD_TESTING: [ON, OFF]
+        exclude:
+          # this is in the main CI
+          - unity_build: ON
             cpp_tests: ON
-          - name: without unity - without unittests
-            unity_build: OFF
-            cpp_tests: OFF
-          - name: with unity - without unittests
-            unity_build: ON
-            cpp_tests: OFF
 
     steps:
     - uses: actions/checkout@v2
