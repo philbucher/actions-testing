@@ -1,6 +1,10 @@
 name: Test include syntax
 
-on: push
+on: 
+  pull_request:
+    paths:
+    - '.'
+    - '.github/workflows/test_include_syntax.yml'
 
 jobs:
 
