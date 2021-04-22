@@ -17,16 +17,16 @@ jobs:
           "without unity - without unittests",
           "with unity - without unittests"
         ]
-      include:
-        - name: without unity - with unittests
-          unity_build: OFF
-          cpp_tests: ON
-        - name: without unity - without unittests
-          unity_build: OFF
-          cpp_tests: OFF
-        - name: with unity - without unittests
-          unity_build: ON
-          cpp_tests: OFF
+        include:
+          - name: without unity - with unittests
+            unity_build: OFF
+            cpp_tests: ON
+          - name: without unity - without unittests
+            unity_build: OFF
+            cpp_tests: OFF
+          - name: with unity - without unittests
+            unity_build: ON
+            cpp_tests: OFF
 
     steps:
     - uses: actions/checkout@v2
