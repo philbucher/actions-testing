@@ -8,8 +8,9 @@ on:
 
 jobs:
 
-  test-include:
+  test-exclude:
     runs-on: ubuntu-latest
+    name: "Unity-build: ${{ matrix.UNITY_BUILD }}, C++ testing: ${{ matrix.BUILD_TESTING }}"
     
     strategy:
       fail-fast: false
