@@ -1,7 +1,7 @@
 name: Test include syntax
 
 on: 
-  pull_request:
+  push:
     paths:
     - '.'
     - '.github/workflows/test_include_syntax.yml'
