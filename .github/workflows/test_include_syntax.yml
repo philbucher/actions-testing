@@ -3,7 +3,7 @@ name: Test include syntax
 on: 
   push:
     paths:
-    - '/*'
+    - '*'
     - '.github/workflows/test_include_syntax.yml'
 
 jobs:
@@ -27,5 +27,5 @@ jobs:
 
     - name: Step 1
       run:  |
-        echo "UNITY_BUILD: " ${{ matrix.unity_build }}
-        echo "CPP_TESTS: " ${{ matrix.cpp_tests }}
+        echo "UNITY_BUILD: " ${{ matrix.UNITY_BUILD }}
+        echo "CPP_TESTS: " ${{ matrix.BUILD_TESTING }}
