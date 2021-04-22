@@ -1,0 +1,28 @@
+name: Test include syntax
+
+on: push
+
+jobs:
+
+  test-include:
+    runs-on: ubuntu-latest
+    
+    strategy:
+      fail-fast: false
+      matrix:
+        # Github Actions requires a single row to be added to the build matrix.
+        # See https://help.github.com/en/articles/workflow-syntax-for-github-actions.
+        name: [
+          "without unity - with unittests",
+          "without unity - without unittests",
+          "with unity - without unittests",
+        ]
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Step 1
+      run: echo "Hello from Step 1"
+
+    - name: Step 2
+      run: echo "Hello from Step 2"
