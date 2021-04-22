@@ -18,8 +18,8 @@ jobs:
         BUILD_TESTING: [ON, OFF]
         exclude:
           # this is in the main CI
-          - unity_build: ON
-            cpp_tests: ON
+          - UNITY_BUILD: ON
+            BUILD_TESTING: ON
 
     steps:
     - uses: actions/checkout@v2
