@@ -3,7 +3,7 @@ name: Test include syntax
 on: 
   push:
     paths:
-    - '.'
+    - '/*'
     - '.github/workflows/test_include_syntax.yml'
 
 jobs:
