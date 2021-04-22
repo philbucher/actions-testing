@@ -15,14 +15,23 @@ jobs:
         name: [
           "without unity - with unittests",
           "without unity - without unittests",
-          "with unity - without unittests",
+          "with unity - without unittests"
         ]
+      include:
+        - name: without unity - with unittests
+          unity_build: OFF
+          cpp_tests: ON
+        - name: without unity - without unittests
+          unity_build: OFF
+          cpp_tests: OFF
+        - name: with unity - without unittests
+          unity_build: ON
+          cpp_tests: OFF
 
     steps:
     - uses: actions/checkout@v2
 
     - name: Step 1
-      run: echo "Hello from Step 1"
-
-    - name: Step 2
-      run: echo "Hello from Step 2"
+      run:  |
+        echo ${{ matrix.unity_build }}
+        echo ${{ matrix.cpp_tests }}
