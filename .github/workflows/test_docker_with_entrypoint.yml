@@ -1,6 +1,10 @@
 name: Test Docker with ENTRYPOINT
 
-on: push
+on: 
+  push:
+    paths:
+    - '.github/workflows/test_docker_with_entrypoint.yml'
+    - '.github/basic-docker-with-entrypoint/DockerFile'
 
 jobs:
 
