@@ -33,5 +33,5 @@ jobs:
 
     - name: Step 1
       run:  |
-        echo ${{ matrix.unity_build }}
-        echo ${{ matrix.cpp_tests }}
+        echo "UNITY_BUILD: " ${{ matrix.unity_build }}
+        echo "CPP_TESTS: " ${{ matrix.cpp_tests }}
